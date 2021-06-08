@@ -83,26 +83,13 @@ function hideAll(e) {
     slideP.style.transform = 'translateX(-50%)' + ' scaleY(0)'
 }
 
-//
-// slideT.addEventListener('click', sliderHideR)
-// slideA.addEventListener('click', sliderHideL)
-// slideP.addEventListener('click', sliderHideP)
-
-// function sliderHideR(e) {
-//     slideT.style.transform = slideT.style.transform === 'scaleX(0)' ? 'scaleX(1)' : 'scaleX(0)'
-//     rev.style.transform = slideT.style.transform === 'scaleX(1)' ? 'rotateY(30deg)' : 'rotateY(0deg)'
-// }
-//
-// function sliderHideL() {
-//     slideA.style.transform = slideA.style.transform === 'scaleX(0)' ? 'scaleX(1)' : 'scaleX(0)'
-//     rev.style.transform = slideA.style.transform === 'scaleX(1)' ? 'rotateY(30deg)' : 'rotateY(0deg)'
-// }
-//
-// function sliderHideP() {
-//     slideP.style.transform = slideP.style.transform === 'translateX(-50%) scaleY(1)' ? 'translateX(-50%)' +
-//         ' scaleY(0)' : 'translateX(-50%) scaleY(1)'
-//     rev.style.transform = slideP.style.transform === 'translateX(-50%) scaleY(1)' ? 'rotateX(-50deg)' : 'rotateX(0deg)'
-// }
+slideP.addEventListener('click', sliderHideP)
+function sliderHideP() {
+    hide.style.display = 'none'
+    slideP.style.transform = slideP.style.transform === 'translateX(-50%) scaleY(1)' ? 'translateX(-50%)' +
+        ' scaleY(0)' : 'translateX(-50%) scaleY(1)'
+    rev.style.transform = slideP.style.transform === 'translateX(-50%) scaleY(1)' ? 'rotateX(-50deg)' : 'rotateX(0deg)'
+}
 
 //
 // const cards = document.querySelectorAll('.card');
